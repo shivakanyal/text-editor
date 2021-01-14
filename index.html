@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="primary-heading">The Text Editor</h1>
+        <div class="fieldset">
+            <div class="font-styles">
+                <button onclick="document.execCommand('bold',false,null);">
+                    <i class="fas fa-bold"></i>
+                </button>
+                <button onclick="document.execCommand('italic',false,null);">
+                    <i class="fas fa-italic"></i>
+                </button>
+                <button onclick="document.execCommand('underline',false,null);">
+                    <i class="fas fa-underline"></i>
+                </button >
+                <button onclick="document.execCommand('strikethrough',false,null);">
+                    <i class="fas fa-strikethrough"></i>
+                </button>
+            </div>
+            <div class="alignments">
+                <button onclick="document.execCommand( 'justifyRight',false,null);">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button onclick="document.execCommand( 'justifyLeft',false,null);"> 
+                    <i class="fas fa-align-left"></i>
+                </button>
+                <button onclick="document.execCommand( 'justifyCenter',false,null);">
+                    <i class="fas fa-align-center"></i>
+                </button>
+                <button onclick="document.execCommand( 'justify',false,null);">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+            </div>
+            <div class="redo-undo">
+                <button onclick="document.execCommand( 'undo',false,null);">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button onclick="document.execCommand( 'undo',false,null);">
+                    <i class="fas fa-undo"></i>
+                </button>
+            </div>
+            <div class="selection">
+                <select class="typeface" onchange="changeFont (this);">
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Sans serif">Sans serif</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                </select>
+                <select class="font-size" onclick="changeFontSize()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <input type="color" class="font-color"  onchange="changeFontColor()">
+            </div>
+        </div>
+    </header>
+    <div class="container" contenteditable="true">
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a7e60fcb21.js"crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
